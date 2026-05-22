@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Cache Bakery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js" defer></script>
+    
+    <section class="hero">
+        <div class="container hero-content">
+
+        <div class="hero-text">
+            <h1>Cookie Cache Bakery</h1>
+
+            <p>
+            Learn FIFO, LRU, and Optimal page replacement algorithms using a cozy cookie bakery simulator.
+            Watch how cookie trays move in and out of the oven while understanding how memory management works.
+            </p>
+        </div>
+
+        <div class="hero-image">
+        <img src="https://png.pngtree.com/png-clipart/20240911/original/pngtree-deliciously-homemade-chocolate-chip-cookies-with-a-perfect-crunch-png-image_15989514.png" class="cookie-img">
+        </div>
+        </div>
+    </section>
+
+    <section class="simulator">
+        <div class="container">
+
+        <div class="section-title">
+            <h2>Bakery Simulator</h2>
+            <p>Try different page replacement strategies inside the cookie oven.</p>
+        </div>
+
+        <div class="simulator-grid">
+
+            <div class="recipe-card">
+            <h3>Recipe Settings</h3>
+
+            <div class="input-group">
+                <label>Cookie Queue / Reference String</label>
+                <input type="text" id="referenceString" value="7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2" />
+            </div>
+
+            <div class="input-group">
+                <label>Oven Slots / No. of Frames</label>
+                <input type="number" id="frameCount" min="1" max="10" value="3" />
+            </div>
+
+            <div class="input-group">
+                <label>Bakery Strategy / Algorithm</label>
+                <select id="algorithm">
+                <option value="FIFO">FIFO</option>
+                <option value="LRU">LRU</option>
+                <option value="OPTIMAL">Optimal</option>
+                </select>
+            </div>
+
+            <div class="button-stack">
+                <button class="btn btn-bake" onclick="runSimulation()">
+                    Bake Simulation
+                </button>
+
+                <button class="btn btn-reset" onclick="resetSimulation()">
+                    Clean Kitchen
+                </button>
+
+                <button class="btn btn-random" onclick="generateRandom()">
+                    Random Surprise
+                </button>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3>Oven Activity</h3>
+            <div class="result-top">
+                
+
+                <div class="stats">
+
+                <div class="stat-box">
+                    <span>Total Requests</span>
+                    <strong id="total">0</strong>
+                </div>
+
+                <div class="stat-box">
+                    <span>Page Faults</span>
+                    <strong id="faults">0</strong>
+                </div>
+
+                <div class="stat-box">
+                    <span>Page Hits</span>
+                    <strong id="hits">0</strong>
+                </div>
+
+                <div class="stat-box">
+                <span>Hit Ratio</span>
+                <strong id="ratio">0%</strong>
+                </div>
+
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                <thead>
+                    <tr>
+                    <th>Step</th>
+                    <th>Requested Cookie</th>
+                    <th>Oven State</th>
+                    <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="simulationBody">
+                    <tr>
+                    <td colspan="4">Run a simulation to start baking 🍪</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+  <footer>
+    made by Justine Philip T. Sicat | BSCS - 3C 🍪
+  </footer>
+</html>
