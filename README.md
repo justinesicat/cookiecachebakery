@@ -140,19 +140,19 @@ This project was developed to demonstrate understanding of:
 - Algorithm Efficiency Analysis
 - Interactive Learning Design
 
-## 📄 Documentation
-
-Detailed project documentation is included in:
-
-```txt
-OS-CS-FINALS-SICAT.pdf
-```
-
 ## 👨‍💻 Developer
 
 **Justine Philip T. Sicat**  
 
 BS Computer Science Student of Tarlac State University
+
+## 📄 Documentation
+
+Full project documentation is included in:
+
+```txt
+OS-CS-FINALS-SICAT.pdf
+```
 
 ## 📄 License
 
